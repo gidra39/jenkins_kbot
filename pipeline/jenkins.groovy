@@ -15,7 +15,7 @@ pipeline {
                         sh 'make linux'
                     } else if (params.OS == 'darwin' && params.ARCH == 'amd64') {
                         sh 'make macOS'
-                    } } else if (params.OS == 'linux' && params.ARCH == 'arm64') {
+                    }  else if (params.OS == 'linux' && params.ARCH == 'arm64') {
                         sh 'make arm'
                     }
                       else if (params.OS == 'windows' && params.ARCH == 'amd64') {
@@ -25,4 +25,5 @@ pipeline {
             }
         }
     }
+}
 }
